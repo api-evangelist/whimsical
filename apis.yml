@@ -3,7 +3,9 @@ url: https://raw.githubusercontent.com/api-evangelist/whimsical/refs/heads/main/
 name: Whimsical
 x-type: company
 description: >-
-  Whimsical is a visual workspace for diagrams, flowcharts, wireframes, mind maps, and docs. Designed for product teams and supports embedded files and AI generation.
+  Whimsical is a visual workspace for boards, mind maps, flowcharts, wireframes, and
+  documents. The Whimsical API is in limited beta with read-only endpoints for users,
+  teams, comments, and files; user provisioning is exposed only through SCIM 2.0.
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - Collaboration
@@ -14,10 +16,48 @@ tags:
 created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
-apis: []
+apis:
+  - aid: whimsical:whimsical-api-beta
+    name: Whimsical API (Beta)
+    humanURL: https://whimsical.com/learn/integrations/api
+    baseURL: https://whimsical.com/api
+    tags:
+      - REST
+      - Beta
+      - Read Only
+      - OAuth 2.1
+    description: >-
+      Limited-beta REST API. Endpoints are read-oriented and use POST verbs:
+      `users.get`, `teams.list`, `comments.list`, `files.list`, `files.get`.
+      Authentication is OAuth 2.1, with credentials issued by Whimsical support to
+      approved beta participants.
+    properties:
+      - type: Documentation
+        url: https://whimsical.com/learn/integrations/api
+      - type: Authentication
+        url: https://whimsical.com/learn/integrations/api
+  - aid: whimsical:whimsical-scim
+    name: Whimsical SCIM 2.0 API
+    humanURL: https://whimsical.com/help
+    baseURL: https://whimsical.com/api/scim/v2
+    tags:
+      - SCIM
+      - User Provisioning
+      - Identity
+    description: >-
+      Whimsical exposes SCIM 2.0 (and only SCIM) for programmatic user provisioning;
+      there is no separate REST endpoint for user management. Available on plans with
+      SCIM support (Enterprise).
+    properties:
+      - type: Documentation
+        url: https://whimsical.com/help
 common:
   - type: Website
     url: https://whimsical.com/
+  - type: Pricing
+    url: https://whimsical.com/pricing
+  - type: Integrations
+    url: https://help.whimsical.com/integrations
   - type: Plans
     url: plans/whimsical-plans-pricing.yml
   - type: RateLimits
