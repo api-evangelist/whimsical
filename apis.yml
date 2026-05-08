@@ -1,0 +1,29 @@
+aid: whimsical
+url: https://raw.githubusercontent.com/api-evangelist/whimsical/refs/heads/main/apis.yml
+name: Whimsical
+x-type: company
+description: >-
+  Whimsical is a visual workspace for diagrams, flowcharts, wireframes, mind maps, and docs. Designed for product teams and supports embedded files and AI generation.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Collaboration
+  - Diagramming
+  - Flowcharts
+  - Wireframes
+  - Mind Maps
+created: '2026-05-08'
+modified: '2026-05-08'
+specificationVersion: '0.19'
+apis: []
+common:
+  - type: Website
+    url: https://whimsical.com/
+  - type: Plans
+    url: plans/whimsical-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/whimsical-rate-limits.yml
+  - type: FinOps
+    url: finops/whimsical-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
