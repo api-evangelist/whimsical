@@ -1,7 +1,7 @@
 aid: whimsical
 url: https://raw.githubusercontent.com/api-evangelist/whimsical/refs/heads/main/apis.yml
 name: Whimsical
-x-type: company
+kind: company
 description: >-
   Whimsical is a visual workspace for boards, mind maps, flowcharts, wireframes, and
   documents. The Whimsical API is in limited beta with read-only endpoints for users,
