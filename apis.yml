@@ -52,6 +52,10 @@ apis:
       - type: Documentation
         url: https://whimsical.com/help
 common:
+  - type: GitHubOrganization
+    url: https://github.com/whimsicalcode
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/whimsical
   - type: Website
     url: https://whimsical.com/
   - type: Pricing
