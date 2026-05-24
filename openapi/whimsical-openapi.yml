@@ -1,0 +1,122 @@
+openapi: 3.1.0
+info:
+  title: Whimsical API (Beta)
+  description: |
+    The Whimsical API is a beta, read-only HTTP RPC-style API for retrieving
+    users, teams, files and comments from a Whimsical workspace. All endpoints
+    accept POST requests with a JSON body. OAuth 2.1 is used to authorize
+    requests; access to the beta requires approval from Whimsical support.
+  version: "0.1.0-beta"
+  contact:
+    name: Whimsical
+    url: https://whimsical.com/learn/integrations/api
+servers:
+  - url: https://whimsical.com/api/v1
+    description: Production (base path inferred; contact Whimsical for the exact base URL)
+security:
+  - OAuth2: []
+paths:
+  /users.get:
+    post:
+      summary: Retrieve user information
+      operationId: usersGet
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                  description: The Whimsical user id
+              required: [id]
+      responses:
+        "200":
+          description: User information
+          content:
+            application/json: {}
+  /teams.list:
+    post:
+      summary: List teams in the workspace
+      operationId: teamsList
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        "200":
+          description: Team list
+          content:
+            application/json: {}
+  /comments.list:
+    post:
+      summary: List comments on an item
+      operationId: commentsList
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                  description: Item id whose comments should be returned
+              required: [id]
+      responses:
+        "200":
+          description: Comment list
+          content:
+            application/json: {}
+  /files.list:
+    post:
+      summary: List files within a parent item
+      operationId: filesList
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                parentId:
+                  type: string
+                  description: Parent file, folder, section, or team id
+              required: [parentId]
+      responses:
+        "200":
+          description: File list
+          content:
+            application/json: {}
+  /files.get:
+    post:
+      summary: Get file information
+      operationId: filesGet
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+              required: [id]
+      responses:
+        "200":
+          description: File information
+          content:
+            application/json: {}
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: OAuth 2.1 authorization (contact Whimsical support for client credentials)
+      flows:
+        authorizationCode:
+          authorizationUrl: https://whimsical.com/oauth/authorize
+          tokenUrl: https://whimsical.com/oauth/token
+          scopes: {}
