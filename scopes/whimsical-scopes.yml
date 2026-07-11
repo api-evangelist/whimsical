@@ -1,0 +1,16 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/whimsical-openapi.yml
+docs: https://whimsical.com/learn/integrations/api
+note: Whimsical's limited-beta API uses OAuth 2.1 but publishes no scopes; credentials
+  are issued privately by Whimsical support and no scopes/permissions reference exists
+  (https://whimsical.com/learn/integrations/api).
+schemes:
+- name: OAuth2
+  source: openapi/whimsical-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://whimsical.com/oauth/authorize
+    tokenUrl: https://whimsical.com/oauth/token
+  description: OAuth 2.1 authorization (contact Whimsical support for client credentials)
+scopes: []

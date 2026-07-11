@@ -52,6 +52,10 @@ apis:
       - type: Documentation
         url: https://whimsical.com/help
 common:
+  - type: Authentication
+    url: authentication/whimsical-authentication.yml
+  - type: OAuthScopes
+    url: scopes/whimsical-scopes.yml
   - type: GitHubOrganization
     url: https://github.com/whimsicalcode
   - type: LinkedIn
@@ -68,6 +72,8 @@ common:
     url: rate-limits/whimsical-rate-limits.yml
   - type: FinOps
     url: finops/whimsical-finops.yml
+  - url: https://whimsical.com/_next_public/feed.xml
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
