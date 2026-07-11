@@ -52,6 +52,10 @@ apis:
       - type: Documentation
         url: https://whimsical.com/help
 common:
+  - type: VulnerabilityDisclosure
+    url: security/whimsical-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/whimsical-domain-security.yml
   - type: Authentication
     url: authentication/whimsical-authentication.yml
   - type: OAuthScopes
