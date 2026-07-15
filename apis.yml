@@ -52,6 +52,8 @@ apis:
       - type: Documentation
         url: https://whimsical.com/help
 common:
+  - type: AgenticAccess
+    url: agentic-access/whimsical-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/whimsical-vulnerability-disclosure.yml
   - type: DomainSecurity
