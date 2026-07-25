@@ -1,0 +1,51 @@
+openapi: 3.1.0
+info:
+  title: Whimsical API (Beta) Comments.list Teams.list API
+  description: 'The Whimsical API is a beta, read-only HTTP RPC-style API for retrieving
+
+    users, teams, files and comments from a Whimsical workspace. All endpoints
+
+    accept POST requests with a JSON body. OAuth 2.1 is used to authorize
+
+    requests; access to the beta requires approval from Whimsical support.
+
+    '
+  version: 0.1.0-beta
+  contact:
+    name: Whimsical
+    url: https://whimsical.com/learn/integrations/api
+servers:
+- url: https://whimsical.com/api/v1
+  description: Production (base path inferred; contact Whimsical for the exact base URL)
+security:
+- OAuth2: []
+tags:
+- name: Teams.list
+paths:
+  /teams.list:
+    post:
+      summary: List teams in the workspace
+      operationId: teamsList
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Team list
+          content:
+            application/json: {}
+      tags:
+      - Teams.list
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: OAuth 2.1 authorization (contact Whimsical support for client credentials)
+      flows:
+        authorizationCode:
+          authorizationUrl: https://whimsical.com/oauth/authorize
+          tokenUrl: https://whimsical.com/oauth/token
+          scopes: {}

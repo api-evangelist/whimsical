@@ -1,0 +1,56 @@
+openapi: 3.1.0
+info:
+  title: Whimsical API (Beta) Comments.list Files.get API
+  description: 'The Whimsical API is a beta, read-only HTTP RPC-style API for retrieving
+
+    users, teams, files and comments from a Whimsical workspace. All endpoints
+
+    accept POST requests with a JSON body. OAuth 2.1 is used to authorize
+
+    requests; access to the beta requires approval from Whimsical support.
+
+    '
+  version: 0.1.0-beta
+  contact:
+    name: Whimsical
+    url: https://whimsical.com/learn/integrations/api
+servers:
+- url: https://whimsical.com/api/v1
+  description: Production (base path inferred; contact Whimsical for the exact base URL)
+security:
+- OAuth2: []
+tags:
+- name: Files.get
+paths:
+  /files.get:
+    post:
+      summary: Get file information
+      operationId: filesGet
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+              required:
+              - id
+      responses:
+        '200':
+          description: File information
+          content:
+            application/json: {}
+      tags:
+      - Files.get
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: OAuth 2.1 authorization (contact Whimsical support for client credentials)
+      flows:
+        authorizationCode:
+          authorizationUrl: https://whimsical.com/oauth/authorize
+          tokenUrl: https://whimsical.com/oauth/token
+          scopes: {}
