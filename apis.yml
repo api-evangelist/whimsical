@@ -6,7 +6,20 @@ description: >-
   Whimsical is a visual workspace for boards, mind maps, flowcharts, wireframes, and
   documents. The Whimsical API is in limited beta with read-only endpoints for users,
   teams, comments, and files; user provisioning is exposed only through SCIM 2.0.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/whimsical.png
 tags:
   - Collaboration
   - Diagramming
@@ -17,40 +30,88 @@ created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
 apis:
-  - aid: whimsical:whimsical-api-beta
-    name: Whimsical API (Beta)
-    humanURL: https://whimsical.com/learn/integrations/api
-    baseURL: https://whimsical.com/api
-    tags:
-      - REST
-      - Beta
-      - Read Only
-      - OAuth 2.1
-    description: >-
-      Limited-beta REST API. Endpoints are read-oriented and use POST verbs:
-      `users.get`, `teams.list`, `comments.list`, `files.list`, `files.get`.
-      Authentication is OAuth 2.1, with credentials issued by Whimsical support to
-      approved beta participants.
-    properties:
-      - type: Documentation
-        url: https://whimsical.com/learn/integrations/api
-      - type: Authentication
-        url: https://whimsical.com/learn/integrations/api
-  - aid: whimsical:whimsical-scim
-    name: Whimsical SCIM 2.0 API
-    humanURL: https://whimsical.com/help
-    baseURL: https://whimsical.com/api/scim/v2
-    tags:
-      - SCIM
-      - User Provisioning
-      - Identity
-    description: >-
-      Whimsical exposes SCIM 2.0 (and only SCIM) for programmatic user provisioning;
-      there is no separate REST endpoint for user management. Available on plans with
-      SCIM support (Enterprise).
-    properties:
-      - type: Documentation
-        url: https://whimsical.com/help
+- aid: whimsical:whimsical-api-beta
+  name: Whimsical API (Beta)
+  humanURL: https://whimsical.com/learn/integrations/api
+  baseURL: https://whimsical.com/api
+  tags:
+  - REST
+  - Beta
+  - Read Only
+  - OAuth 2.1
+  description: >-
+    Limited-beta REST API. Endpoints are read-oriented and use POST verbs: `users.get`, `teams.list`,
+    `comments.list`, `files.list`, `files.get`. Authentication is OAuth 2.1, with credentials issued by
+    Whimsical support to approved beta participants.
+  properties:
+  - type: Documentation
+    url: https://whimsical.com/learn/integrations/api
+  - type: Authentication
+    url: https://whimsical.com/learn/integrations/api
+- aid: whimsical:whimsical-scim
+  name: Whimsical SCIM 2.0 API
+  humanURL: https://whimsical.com/help
+  baseURL: https://whimsical.com/api/scim/v2
+  tags:
+  - SCIM
+  - User Provisioning
+  - Identity
+  description: >-
+    Whimsical exposes SCIM 2.0 (and only SCIM) for programmatic user provisioning; there is no separate
+    REST endpoint for user management. Available on plans with SCIM support (Enterprise).
+  properties:
+  - type: Documentation
+    url: https://whimsical.com/help
+- aid: whimsical:whimsical-comments-list-api
+  name: Whimsical Comments.list API
+  description: The Comments.list API from Whimsical — 1 operation(s) for comments.list.
+  humanURL: https://whimsical.com/learn/integrations/api
+  baseURL: https://whimsical.com/api
+  tags:
+  - Comments.list
+  properties:
+  - type: OpenAPI
+    url: openapi/whimsical-comments-list-api-openapi.yml
+- aid: whimsical:whimsical-files-get-api
+  name: Whimsical Files.get API
+  description: The Files.get API from Whimsical — 1 operation(s) for files.get.
+  humanURL: https://whimsical.com/learn/integrations/api
+  baseURL: https://whimsical.com/api
+  tags:
+  - Files.get
+  properties:
+  - type: OpenAPI
+    url: openapi/whimsical-files-get-api-openapi.yml
+- aid: whimsical:whimsical-files-list-api
+  name: Whimsical Files.list API
+  description: The Files.list API from Whimsical — 1 operation(s) for files.list.
+  humanURL: https://whimsical.com/learn/integrations/api
+  baseURL: https://whimsical.com/api
+  tags:
+  - Files.list
+  properties:
+  - type: OpenAPI
+    url: openapi/whimsical-files-list-api-openapi.yml
+- aid: whimsical:whimsical-teams-list-api
+  name: Whimsical Teams.list API
+  description: The Teams.list API from Whimsical — 1 operation(s) for teams.list.
+  humanURL: https://whimsical.com/learn/integrations/api
+  baseURL: https://whimsical.com/api
+  tags:
+  - Teams.list
+  properties:
+  - type: OpenAPI
+    url: openapi/whimsical-teams-list-api-openapi.yml
+- aid: whimsical:whimsical-users-get-api
+  name: Whimsical Users.get API
+  description: The Users.get API from Whimsical — 1 operation(s) for users.get.
+  humanURL: https://whimsical.com/learn/integrations/api
+  baseURL: https://whimsical.com/api
+  tags:
+  - Users.get
+  properties:
+  - type: OpenAPI
+    url: openapi/whimsical-users-get-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/whimsical-agentic-access.yml
