@@ -1,0 +1,22 @@
+{
+  "provider": "whimsical",
+  "sources": [
+    "whimsical-comments-list-api-openapi.yml",
+    "whimsical-files-get-api-openapi.yml",
+    "whimsical-files-list-api-openapi.yml",
+    "whimsical-teams-list-api-openapi.yml",
+    "whimsical-users-get-api-openapi.yml"
+  ],
+  "outputs": [
+    "whimsical-comments-list-api-openapi.yml",
+    "whimsical-files-get-api-openapi.yml",
+    "whimsical-files-list-api-openapi.yml",
+    "whimsical-teams-list-api-openapi.yml",
+    "whimsical-users-get-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
