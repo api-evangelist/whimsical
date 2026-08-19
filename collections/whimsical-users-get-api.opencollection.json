@@ -1,0 +1,45 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Whimsical API (Beta) Comments.list Users.get API",
+    "version": "0.1.0-beta"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://whimsical.com/oauth/authorize",
+      "accessTokenUrl": "https://whimsical.com/oauth/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Users.get",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve user information",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://whimsical.com/api/v1/users.get",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieve user information"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

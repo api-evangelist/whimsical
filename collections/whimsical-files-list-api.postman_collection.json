@@ -1,0 +1,145 @@
+{
+  "item": [
+    {
+      "id": "c59f4044-004d-4185-91dd-f85653808b40",
+      "name": "Files.list",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "71d58941-9658-4434-b8e9-35ce4db884b6",
+          "name": "List files within a parent item",
+          "request": {
+            "name": "List files within a parent item",
+            "description": {},
+            "url": {
+              "path": [
+                "files.list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"parentId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "8de67ee6-380b-46aa-94ec-31c07aea223b",
+              "name": "File list",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "files.list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"parentId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://whimsical.com/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "accessTokenUrl",
+        "value": "https://whimsical.com/oauth/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://whimsical.com/oauth/authorize"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "043c620b-6654-497d-a7ab-e10517fde933",
+    "name": "Whimsical API (Beta) Comments.list Files.list API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Whimsical API is a beta, read-only HTTP RPC-style API for retrieving\nusers, teams, files and comments from a Whimsical workspace. All endpoints\naccept POST requests with a JSON body. OAuth 2.1 is used to authorize\nrequests; access to the beta requires approval from Whimsical support.\n\n\nContact Support:\n Name: Whimsical",
+      "type": "text/plain"
+    }
+  }
+}

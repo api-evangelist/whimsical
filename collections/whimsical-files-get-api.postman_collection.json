@@ -1,0 +1,145 @@
+{
+  "item": [
+    {
+      "id": "0422d0e1-c87e-4cb3-ad79-b10e1b5522a3",
+      "name": "Files.get",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6651a31a-ee1d-4fc8-9bc5-7306096f2693",
+          "name": "Get file information",
+          "request": {
+            "name": "Get file information",
+            "description": {},
+            "url": {
+              "path": [
+                "files.get"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "70215d16-6f1c-4c76-8657-acbe045ce134",
+              "name": "File information",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "files.get"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://whimsical.com/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "accessTokenUrl",
+        "value": "https://whimsical.com/oauth/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://whimsical.com/oauth/authorize"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "155d5ce1-5656-4048-a24b-ff84985db2a5",
+    "name": "Whimsical API (Beta) Comments.list Files.get API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Whimsical API is a beta, read-only HTTP RPC-style API for retrieving\nusers, teams, files and comments from a Whimsical workspace. All endpoints\naccept POST requests with a JSON body. OAuth 2.1 is used to authorize\nrequests; access to the beta requires approval from Whimsical support.\n\n\nContact Support:\n Name: Whimsical",
+      "type": "text/plain"
+    }
+  }
+}
