@@ -1,0 +1,1 @@
+{"resource":"https://mcp.whimsical.com","authorization_servers":["https://mcp.whimsical.com"],"scopes_supported":["profile","mcp:read","mcp:write"],"bearer_methods_supported":["header"]}

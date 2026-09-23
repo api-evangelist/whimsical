@@ -1,11 +1,7 @@
 {
   "provider": "whimsical",
   "sources": [
-    "whimsical-comments-list-api-openapi.yml",
-    "whimsical-files-get-api-openapi.yml",
-    "whimsical-files-list-api-openapi.yml",
-    "whimsical-teams-list-api-openapi.yml",
-    "whimsical-users-get-api-openapi.yml"
+    "_original/whimsical-openapi.yml"
   ],
   "outputs": [
     "whimsical-comments-list-api-openapi.yml",
@@ -17,6 +13,26 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "whimsical-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "whimsical-openapi.yml: tagged paths POST /users.get -> Users.get",
+    "whimsical-openapi.yml: tagged paths POST /teams.list -> Teams.list",
+    "whimsical-openapi.yml: tagged paths POST /comments.list -> Comments.list",
+    "whimsical-openapi.yml: tagged paths POST /files.list -> Files.list",
+    "whimsical-openapi.yml: tagged paths POST /files.get -> Files.get",
+    "whimsical-openapi.yml: declared missing tag: Comments.list",
+    "whimsical-openapi.yml: declared missing tag: Files.get",
+    "whimsical-openapi.yml: declared missing tag: Files.list",
+    "whimsical-openapi.yml: declared missing tag: Teams.list",
+    "whimsical-openapi.yml: declared missing tag: Users.get",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "whimsical-comments-list-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "whimsical-files-get-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "whimsical-files-list-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "whimsical-teams-list-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "whimsical-users-get-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
