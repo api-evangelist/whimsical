@@ -47,3 +47,16 @@
     detected: '2026-10-15'
   status: not-a-workflow
   arazzo: null
+- slug: whimsical-slack-own
+  label: Slack (own)
+  partner: slack
+  partner_name: Slack (own)
+  category: Slack app
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://slack.com/marketplace/A04R8NWATL5-whimsical
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
