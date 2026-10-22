@@ -5,6 +5,9 @@ checked:
 - https://registry.modelcontextprotocol.io/v0/servers
 - okta/integrations/okta-integration-edges.yml
 - slack/integrations/slack-integration-edges.yml
+- https://github.com/raycast/extensions/tree/84f9ac51336a8c69f70974a75bc067c0feae3658/extensions
+- https://www.raycast.com/api/v1/store_listings
+- obsidian/integrations/obsidian-integration-edges.yml
 marketplace_apps: []
 edges:
 - partner_name: Atlassian Marketplace
@@ -22,6 +25,86 @@ edges:
   publisher_name: Whimsical
   detected_by: sweep-devtools.py
   detected: '2026-10-14'
+- partner_name: MCP Registry
+  partner: mcp
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://registry.modelcontextprotocol.io/v0/servers?search=com.whimsical
+  contract_reference:
+    register: registry.modelcontextprotocol.io
+    spec_file: null
+    role: mcp-server-listing
+    registered_name: com.whimsical/mcp
+    register_id: com.whimsical/mcp
+    detected_by: sweep-agent-tools.py
+    detected: '2026-10-19'
+  mcp_registry:
+    servers:
+    - com.whimsical/mcp
+    hosted_remote: 1
+    local_package: 0
+    transports:
+      streamable-http: 1
+    auth_declared: 0
+    catalog_declared: true
+    namespace_domains:
+    - whimsical.com
+  matched_by:
+  - namespace-domain
+  detected_by: sweep-agent-tools.py
+  first_seen: '2026-10-14'
+- partner_name: Raycast
+  partner: raycast
+  partner_match: domain
+  partner_url: https://www.raycast.com
+  partner_domain: raycast.com
+  type: marketplace
+  marketplace: raycast-store
+  channel: connector-listing
+  relationship: connector-coverage
+  evidence: https://www.raycast.com/kud/whimsical
+  app: Whimsical
+  category: Raycast Store extension (community wrapper)
+  listing_count: 1
+  contract_reference:
+    register: Raycast Store (raycast/extensions monorepo + store_listings JSON)
+    spec_file: null
+    role: raycast-community-wrapper
+    builder: community
+    authors:
+    - kud
+    matched_domain: whimsical.com
+    matched_by: domain
+    monorepo_commit: 84f9ac51336a8c69f70974a75bc067c0feae3658
+    listings:
+    - title: Whimsical
+      store_url: https://www.raycast.com/kud/whimsical
+      installs: 588
+      categories:
+      - Design Tools
+      - Productivity
+      - Developer Tools
+      - AI Extensions
+      source: https://github.com/raycast/extensions/tree/84f9ac51336a8c69f70974a75bc067c0feae3658/extensions/whimsical/
+      author: kud
+      ai_tools: true
+    categories:
+    - AI Extensions
+    - Design Tools
+    - Developer Tools
+    - Productivity
+    identity_note: the extension's own source calls a host on the product's domain AND its title / package name
+      passes partner_link's name check; built by Raycast community developers, not the vendor
+    signal_note: 'coverage: Raycast''s store reaches the product through community-built extensions; one edge per
+      (product, store); install / listing counts are context, never counted'
+    detected_by: sweep-raycast-store-extensions.py
+    detected: '2026-10-22'
+  detected_by: sweep-raycast-store-extensions.py
+  first_seen: '2026-10-22'
+  direction: partner-built
 - partner_name: Okta (own)
   partner: okta
   partner_match: mirror
@@ -64,36 +147,22 @@ edges:
   detected: '2026-10-18'
   detected_by: mirror-platform-listings.py
   category: Slack app
-- partner_name: MCP Registry
-  partner: mcp
-  partner_match: register
-  type: register
-  channel: standard-directory
-  relationship: standard-participant
-  direction: partner-built
-  evidence: https://registry.modelcontextprotocol.io/v0/servers?search=com.whimsical
-  contract_reference:
-    register: registry.modelcontextprotocol.io
-    spec_file: null
-    role: mcp-server-listing
-    registered_name: com.whimsical/mcp
-    register_id: com.whimsical/mcp
-    detected_by: sweep-agent-tools.py
-    detected: '2026-10-19'
-  mcp_registry:
-    servers:
-    - com.whimsical/mcp
-    hosted_remote: 1
-    local_package: 0
-    transports:
-      streamable-http: 1
-    auth_declared: 0
-    catalog_declared: true
-    namespace_domains:
-    - whimsical.com
-  matched_by:
-  - namespace-domain
-  detected_by: sweep-agent-tools.py
-  first_seen: '2026-10-14'
+- partner_name: Obsidian (obsidian-community-plugins)
+  partner: obsidian
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: obsidian-community-plugins
+  evidence: https://github.com/whimsicalcode/obsidian-whimsical-plugin
+  mirror_of: obsidian/integrations/obsidian-integration-edges.yml
+  apps:
+  - Whimsical
+  listing_count: 1
+  detected: '2026-10-22'
+  detected_by: mirror-platform-listings.py
+  category: Obsidian community plugin
 source:
 - https://marketplace.atlassian.com/
