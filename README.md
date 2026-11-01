@@ -1,4 +1,4 @@
-# Whimsical (whimsical)
+# Whimsical
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,75 +66,141 @@
 
 Whimsical is a visual workspace for boards, mind maps, flowcharts, wireframes, and documents. The Whimsical API is in limited beta with read-only endpoints for users, teams, comments, and files; user provisioning is exposed only through SCIM 2.0.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/whimsical/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/whimsical/refs/heads/main/apis.yml)
+**Areas:** Collaboration · Diagramming · Flowcharts · Wireframes · Mind Maps
 
-## Tags
+## Whimsical on APIs.io
 
-- Collaboration
-- Diagramming
-- Flowcharts
-- Wireframes
-- Mind Maps
+Everything profiled for Whimsical is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/whimsical/](https://apis.io/providers/whimsical/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (7)
 
-- **Created:** 2026-05-08
-- **Modified:** 2026-05-08
+- [Whimsical API (Beta)](https://apis.io/apis/whimsical/whimsical-api-beta/) — Limited-beta REST API. Endpoints are read-oriented and use POST verbs: `users.get`, `teams.list`, `comments.list`, `files.list`, `files.get`. Authentication…
+- [Whimsical SCIM 2.0 API](https://apis.io/apis/whimsical/whimsical-scim/) — Whimsical exposes SCIM 2.0 (and only SCIM) for programmatic user provisioning; there is no separate REST endpoint for user management. Available on plans…
+- [Whimsical Comments.list API](https://apis.io/apis/whimsical/whimsical-comments-list-api/) — The Comments.list API from Whimsical — 1 operation(s) for comments.list.
+- [Whimsical Files.get API](https://apis.io/apis/whimsical/whimsical-files-get-api/) — The Files.get API from Whimsical — 1 operation(s) for files.get.
+- [Whimsical Files.list API](https://apis.io/apis/whimsical/whimsical-files-list-api/) — The Files.list API from Whimsical — 1 operation(s) for files.list.
+- [Whimsical Teams.list API](https://apis.io/apis/whimsical/whimsical-teams-list-api/) — The Teams.list API from Whimsical — 1 operation(s) for teams.list.
+- [Whimsical Users.get API](https://apis.io/apis/whimsical/whimsical-users-get-api/) — The Users.get API from Whimsical — 1 operation(s) for users.get.
 
-## APIs
+### Published properties
 
-### Whimsical API (Beta)
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Limited-beta REST API. Endpoints are read-oriented and use POST verbs: `users.get`, `teams.list`, `comments.list`, `files.list`, `files.get`. Authentication is OAuth 2.1, with credentials issued by Whimsical support to approved beta participants.
+#### MCP servers (1)
 
-- **Human URL:** [https://whimsical.com/learn/integrations/api](https://whimsical.com/learn/integrations/api)
-- **Base URL:** `https://whimsical.com/api`
+Model Context Protocol servers that expose the API to agents.
 
-#### Tags
+- [whimsical](https://apis.io/servers/whimsical/whimsical/)
 
-- REST
-- Beta
-- Read Only
-- OAuth 2.1
+#### Agentic access (1)
 
-#### Properties
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- [Documentation](https://whimsical.com/learn/integrations/api)
-- [Authentication](https://whimsical.com/learn/integrations/api)
-- [Postman Collection](collections/whimsical.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/whimsical.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Whimsical Agentic Access](https://apis.io/agentic-access/whimsical/whimsical-agentic-access/)
 
-### Whimsical SCIM 2.0 API
+#### Collections (6)
 
-Whimsical exposes SCIM 2.0 (and only SCIM) for programmatic user provisioning; there is no separate REST endpoint for user management. Available on plans with SCIM support (Enterprise).
+Postman and Open Collection request collections.
 
-- **Human URL:** [https://whimsical.com/help](https://whimsical.com/help)
-- **Base URL:** `https://whimsical.com/api/scim/v2`
+- [Whimsical API (Beta)](https://apis.io/collections/whimsical/open-whimsical/)
+- [Whimsical API (Beta) Comments.list API](https://apis.io/collections/whimsical/open-whimsical-comments-list-api/)
+- [Whimsical API (Beta) Comments.list Files.get API](https://apis.io/collections/whimsical/open-whimsical-files-get-api/)
+- [Whimsical API (Beta) Comments.list Files.list API](https://apis.io/collections/whimsical/open-whimsical-files-list-api/)
+- [Whimsical API (Beta) Comments.list Teams.list API](https://apis.io/collections/whimsical/open-whimsical-teams-list-api/)
+- [Whimsical API (Beta) Comments.list Users.get API](https://apis.io/collections/whimsical/open-whimsical-users-get-api/)
 
-#### Tags
+#### Security (3)
 
-- SCIM
-- User Provisioning
-- Identity
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Properties
+- [Whimsical Authentication](https://apis.io/security/whimsical/whimsical-authentication/)
+- [Whimsical Domain Security](https://apis.io/security/whimsical/whimsical-domain-security/)
+- [Whimsical Vulnerability Disclosure](https://apis.io/security/whimsical/whimsical-vulnerability-disclosure/)
 
-- [Documentation](https://whimsical.com/help)
-- [Postman Collection](collections/whimsical.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/whimsical.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### OAuth scopes (1)
 
-## Common Properties
+The permissions the API asks for.
 
-- [GitHub Organization](https://github.com/whimsicalcode)
-- [LinkedIn](https://www.linkedin.com/company/whimsical)
+- [Whimsical Scopes](https://apis.io/scopes/whimsical/whimsical-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Whimsical Plans Pricing](https://apis.io/plans/whimsical/whimsical-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Whimsical Rate Limits](https://apis.io/rate-limits/whimsical/whimsical-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Whimsical Finops](https://apis.io/finops/whimsical/whimsical-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://whimsical.com/)
 - [Pricing](https://whimsical.com/pricing)
-- [Integrations](https://help.whimsical.com/integrations)
-- [Plans](plans/whimsical-plans-pricing.yml)
-- [Rate Limits](rate-limits/whimsical-rate-limits.yml)
-- [Fin Ops](finops/whimsical-finops.yml)
+- [Blog](https://whimsical.com/_next_public/feed.xml)
+- [GitHub](https://github.com/whimsicalcode)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 29.0** — thin · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 68.3 |
+| Contract quality | 42.9 |
+| Contract governance | 0.0 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 23.8 |
+| Access clarity | 15.8 |
+
+**Agent readiness 42.7** — agent-ready (gated down from agent-native)
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 27.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/whimsical/](https://apis.io/providers/whimsical/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Whimsical: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/whimsical/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
